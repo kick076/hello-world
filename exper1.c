@@ -4,11 +4,11 @@
 void signalhandler(int signum)
 {
 printf("received signal number is %d\n",signum);
-exit(signum);
+exit(signum);//terminate program
 }
 int main()
 {
-signal(SIGINT,signalhandler);
+signal(SIGINT,signalhandler);/*first argument represents signal number,second arguments represents signal handler*/
 while(1)
 {
 printf("welcome to ui lab \n");
